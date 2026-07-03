@@ -22,7 +22,7 @@ function App() {
       return
     }
 
-    setMessage('Conta criada! Agora tente entrar.')
+    setMessage('Conta criada! Verifique seu e-mail e depois clique em Entrar.')
   }
 
   async function entrar() {
@@ -49,8 +49,8 @@ function App() {
 
   if (user) {
     return (
-      <div className="app">
-        <div className="card">
+      <main className="app">
+        <section className="card">
           <div className="logo">CF</div>
           <h1>Bem-vindo ao CargaFit</h1>
           <p>Login realizado com sucesso.</p>
@@ -61,14 +61,14 @@ function App() {
 
           <h2>Próxima etapa</h2>
           <p>Aqui vamos colocar seus treinos, cargas e histórico.</p>
-        </div>
-      </div>
+        </section>
+      </main>
     )
   }
 
   return (
-    <div className="app">
-      <div className="card">
+    <main className="app">
+      <section className="card">
         <div className="logo">CF</div>
         <h1>CargaFit</h1>
         <p>Seu diário de cargas na academia.</p>
@@ -77,14 +77,14 @@ function App() {
           type="email"
           placeholder="E-mail"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(event) => setEmail(event.target.value)}
         />
 
         <input
           type="password"
           placeholder="Senha"
           value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={(event) => setPassword(event.target.value)}
         />
 
         <div className="buttons">
@@ -95,8 +95,8 @@ function App() {
         </div>
 
         {message && <p className="message">{message}</p>}
-      </div>
-    </div>
+      </section>
+    </main>
   )
 }
 
